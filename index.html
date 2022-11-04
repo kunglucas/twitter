@@ -80,12 +80,38 @@
       .tweet-feed{
       height: 90vh;
       overflow-y: scroll;
+      padding-bottom: 1rem;
     }
     .card-footer-list{
       display: flex;
       justify-content: space-around;
       list-style: none;
     }
+    .confirmed-tickmarks{
+      background-color:#1da1f2; color:white; padding:2px;
+    }
+    .input-icons i {
+            position: absolute;
+        }
+        .input-icons {
+            width: 100%;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        .icon {
+            padding: 10px;
+            color: black;
+            min-width: 50px;
+            text-align: center;
+        }
+        .input-field {
+          width: 100%;
+          padding: 10px 35px 10px 15px;
+          border: none;
+          border-radius: 100px;
+          outline: none;
+          text-align: center;
+        }
     </style>
   </head>
   <body class="bg-light">
@@ -192,7 +218,7 @@
               <div class="card">
                 <div class="card-header">
                   <img src="https://picsum.photos/30/30"  class="rounded-circle" alt="Random photo"/>
-                  <strong>Alex <i style="background-color:#1da1f2; color:white; padding:2px;" class="fa fa-check rounded-circle" aria-hidden="true"></i></strong>         
+                  <strong>Alex <i class="confirmed-tickmarks fa fa-check rounded-circle" aria-hidden="true"></i></strong>         
                 </div>
                 <div class="card-body">
                   <p class="article-text">
@@ -218,7 +244,7 @@
               <div class="card">
                 <div class="card-header">
                   <img src="https://picsum.photos/30/30"  class="rounded-circle" alt="Random photo"/>
-                  <strong>Lucas <i style="background-color:#1da1f2; color:white; padding:2px;" class="fa fa-check rounded-circle" aria-hidden="true"></i></strong>         
+                  <strong>Lucas <i class="confirmed-tickmarks fa fa-check rounded-circle" aria-hidden="true"></i></strong>         
                 </div>
                 <div class="card-body">
                   <p class="article-text">
@@ -232,7 +258,15 @@
                     <iframe src="https://giphy.com/embed/qgQUggAC3Pfv687qPC" width="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dommespace-domme-space-programador-qgQUggAC3Pfv687qPC"></a></p>
                   </div>
                 </div>
-                <div class="card-footer">Display likes etc</div>
+                <div class="card-footer">
+                  <ul class="card-footer-list">
+                    <li><i class="far fa-comment"></i></li>
+                    <li><i class="bi-hand-thumbs-up"></i></li>
+                    <li><i class="fa fa-heart"></i></li>
+                    <li><i class="fa fa-retweet"></i></li>
+                    
+                  </ul>
+                </div>
               </div>
               <div class="card">
                 <div class="card-header">Twitter feed</div>
@@ -244,7 +278,14 @@
                     dignissimos veritatis at sapiente qui debitis laboriosam?
                   </p>
                 </div>
-                <div class="card-footer">Display likes etc</div>
+                <div class="card-footer">
+                  <ul class="card-footer-list">
+                    <li><i class="far fa-comment"></i></li>
+                    <li><i class="bi-hand-thumbs-up"></i></li>
+                    <li><i class="fa fa-heart"></i></li>
+                    <li><i class="fa fa-retweet"></i></li>
+                  </ul>
+                </div>
               </div>
               <div class="card">
                 <div class="card-header">Twitter feed</div>
@@ -256,7 +297,14 @@
                     dignissimos, doloremque sit id ullam, in laborum molestias.
                   </p>
                 </div>
-                <div class="card-footer">Display likes etc</div>
+                <div class="card-footer">
+                  <ul class="card-footer-list">
+                    <li><i class="far fa-comment"></i></li>
+                    <li><i class="bi-hand-thumbs-up"></i></li>
+                    <li><i class="fa fa-heart"></i></li>
+                    <li><i class="fa fa-retweet"></i></li>
+                  </ul>
+                </div>
               </div>
               <div class="card">
                 <div class="card-header">Twitter feed</div>
@@ -269,7 +317,14 @@
                     consectetur!
                   </p>
                 </div>
-                <div class="card-footer">Display likes etc</div>
+                <div class="card-footer">
+                  <ul class="card-footer-list">
+                    <li><i class="far fa-comment"></i></li>
+                    <li><i class="bi-hand-thumbs-up"></i></li>
+                    <li><i class="fa fa-heart"></i></li>
+                    <li><i class="fa fa-retweet"></i></li>
+                  </ul>
+                </div>
               </div>
               <div class="card">
                 <div class="card-header">Twitter feed</div>
@@ -282,7 +337,14 @@
                     voluptatibus.
                   </p>
                 </div>
-                <div class="card-footer">Display likes etc</div>
+                <div class="card-footer">
+                  <ul class="card-footer-list">
+                    <li><i class="far fa-comment"></i></li>
+                    <li><i class="bi-hand-thumbs-up"></i></li>
+                    <li><i class="fa fa-heart"></i></li>
+                    <li><i class="fa fa-retweet"></i></li>
+                  </ul>
+                </div>
               </div>
             </article>
           </section>
@@ -290,7 +352,40 @@
         <!-- main -->
         <!--Sidebar right-->
         <div class="col-3">
-          <input type="text" placeholder="Search...">
+          <form >
+            <div class="input-icons">
+                <i class="fa fa-search icon">
+              </i>
+                <input class="input-field" 
+                       type="text" 
+                       placeholder="Search...">
+            </div>
+          </form>
+          <!--Trending-->
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th><h5 class="fw-bold">Trends for you</h5></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <ul style="list-style: none;">
+                    <li><strong>Nasa</strong></li>
+                    <li>space company</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td><small>Tesla</small></td>
+              </tr>
+              <tr>
+                <td><small>Will&Skill</small></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         </div>
       </div>
     </div>
