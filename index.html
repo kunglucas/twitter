@@ -12,9 +12,14 @@
           {
             .col-3 {
               display:none;
+              width:0px;
             }
             .col-7 {
-              
+              width:80%;
+            }
+
+            .col-2>nav {
+              background:red !important;
             }
           }
           .container .navbar-brand {
@@ -28,15 +33,29 @@
           .nav-link {
             color:rgb(45, 44, 44);
           }
+          
+          .tweet input::placeholder {
+            color:rgb(82, 80, 80);
+            font-weight:bold;
+            font-size:16px;
+          }
+
+          .tweet input:focus {
+            background-color:red;
+          }
 
           article {
             background-color:white;
             padding:4px;
           }
+
+          article .card {
+            margin-top:24px;
+          }
         </style>
 </head>
 <body class="bg-light">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row align-items-start">
               <div class="col-2">
                   <nav class="navbar position-fixed bg-light">
@@ -79,13 +98,14 @@
                 </nav>
               </div>
               <div class="col-7">
-                <section>
-                  <div class="card">
-                    <h3 class="fw-bold m-1">Home</h3>
-                    <input type="text" placeholder="What's happening..">
-                  </div>
+                  <section class="tweet">
+                    <div class="card">
+                      <h3 class="fw-bold m-1">Home</h3>
+                        <input type="text" placeholder="What's happening..">
+                    </div>
+                  </section> 
+                  <section>
                   <article>
-                    Feed
                     <div class="card">
                         <div class="card-header">Twitter feed</div>
                         <div class="card-body">
@@ -95,7 +115,6 @@
                           Display likes etc
                         </div>
                     </div>
-                    Feed
                     <div class="card">
                         <div class="card-header">Twitter feed</div>
                         <div class="card-body">
@@ -105,7 +124,6 @@
                           Display likes etc
                         </div>
                     </div>
-                    Feed
                     <div class="card">
                         <div class="card-header">Twitter feed</div>
                         <div class="card-body">
@@ -115,7 +133,6 @@
                           Display likes etc
                         </div>
                     </div>
-                    Feed
                     <div class="card">
                         <div class="card-header">Twitter feed</div>
                         <div class="card-body">
@@ -125,7 +142,6 @@
                           Display likes etc
                         </div>
                     </div>
-                    Feed
                     <div class="card">
                         <div class="card-header">Twitter feed</div>
                         <div class="card-body">
@@ -135,7 +151,6 @@
                           Display likes etc
                         </div>
                     </div>
-                    Feed
                     <div class="card">
                         <div class="card-header">Twitter feed</div>
                         <div class="card-body">
