@@ -62,13 +62,23 @@
         opacity:0, 2;
       }
 
-      .tweet input:focus {
-        background-color: red;
+      .tweet input {
+        width: 100%;
+        color:black;
+        border:0;
+        outline: none !important;
       }
-
+      .tweet-input-focus {
+        display:none;
+      }
+      .tweet-input:focus + .tweet-input-focus {
+        display:block;
+      }
+    /*tweet -> ON foucs add ::After with text ie 'Everyone Can see This' */
       article {
         background-color: white;
         padding: 4px;
+        padding-top: 0px;
       }
 
       article .card {
@@ -78,7 +88,7 @@
         opacity: 0.8;
       }
       .tweet-feed{
-      height: 90vh;
+      height: 80vh; 
       overflow-y: scroll;
       padding-bottom: 1rem;
     }
@@ -111,6 +121,13 @@
           border-radius: 100px;
           outline: none;
           text-align: center;
+        }
+        .tweet-btn{
+          background-color:#1da1f2;
+        }
+        td > ul {
+          list-style: none;
+          padding: 0;
         }
     </style>
   </head>
@@ -170,6 +187,11 @@
                   <span class="ms-1 d-none d-sm-inline">Profile</span>
                 </a>
               </li>
+              <li>
+                <button type="button" class="btn btn-primary btn-rounded tweet-btn">
+                  Tweet
+                </button>
+              </li>
             </ul>
             <hr />
             <div class="dropdown pb-4">
@@ -207,12 +229,36 @@
         <!-- Sidebar Right -->
         <!-- main -->
         <main class="col-7 py3">
+          <!-- TWEET SECTION -->
           <section class="tweet">
-            <div class="card">
-              <h3 class="fw-bold m-1">Home</h3>
-              <input type="text" placeholder="What's happening.." />
+            <div class="container-fluid d-flex p-2">
+              <img src="https://picsum.photos/30/30"   alt="Random photo" style=" vertical-align: middle;width: 50px;height: 50px;border-radius: 50%"/>
+              <div class="d-flex flex-column flex-grow-1">
+              <div class="inner-tweet-top d-flex justify-content-between">
+              <h3>Home</h3>
+              <img src="./assets/svgexport-11.svg" alt="twitter-star-Icon" class="img-fluid bg-light">
             </div>
+              <div class="inner-tweet-mid">
+                <input class="tweet-input bg-light" type="text" placeholder="What's Happening...">
+
+                <!-- Focus span -->
+                <div class="tweet-input-focus fw-bold" style="font-size:14px;"><a href="#" style="color:#1da1f2; text-decoration:none;"><i class="fa fa-globe"></i> Everyone can reply</a></div>
+              </div>
+              <hr>
+              <div class="inner-tweet-bot d-flex justify-content-between">
+                <div class="tweet-logos">
+                  <!-- Logotyper -->
+                  <img src="./assets/svgexport-13.svg" alt="">
+                  <img src="./assets/svgexport-14.svg" alt="">
+                  <img src="./assets/svgexport-15.svg" alt="">
+                  <img src="./assets/svgexport-16.svg" alt="">
+              </div>
+              <button class="btn btn-primary btn-rounded tweet-btn">Tweet</button>
+              </div>
+            </div>
+          </div>
           </section>
+          <!-- TWEET SECTION -->
           <section class="tweet-feed">
             <article>
               <div class="card">
@@ -371,7 +417,8 @@
             <tbody>
               <tr>
                 <td>
-                  <ul style="list-style: none;">
+                  <ul>
+                    <li><small style="font-size:12px;">Trending in Sweden</small><img src="./assets/svgexport-10.svg" alt="menu" style="float:right;"></li>
                     <li><strong>NASA</strong></li>
                     <li>space company</li>
                   </ul>
@@ -379,7 +426,8 @@
               </tr>
               <tr>
                 <td>
-                  <ul style="list-style: none;">
+                  <ul>
+                    <li><small style="font-size:12px;">Trending in Sweden</small><img src="./assets/svgexport-10.svg" alt="menu" style="float:right;"></li>
                     <li><strong>Tesla</strong></li>
                     <li>car company</li>
                   </ul>
@@ -387,7 +435,8 @@
               </tr>
               <tr>
                 <td>
-                  <ul style="list-style: none;">
+                  <ul>
+                    <li><small style="font-size:12px;">Trending in Sweden</small><img src="./assets/svgexport-10.svg" alt="menu" style=" cursor: pointer; float:right;"></li>
                     <li><strong>Will&Skill</strong></li>
                     <li>Crafting awesome websites</li>
                   </ul>
