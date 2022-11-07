@@ -74,7 +74,6 @@
       .tweet-input:focus + .tweet-input-focus {
         display:block;
       }
-    /*tweet -> ON foucs add ::After with text ie 'Everyone Can see This' */
       article {
         background-color: white;
         padding: 4px;
@@ -84,6 +83,16 @@
       article .card {
         margin-top: 24px;
       }
+
+      .card-header {
+        background-color:white;
+        border-bottom:none;
+      }
+
+      .card:hover >*{
+        background-color:rgb(249, 245, 245);
+      }
+
       .tweet{
         opacity: 0.8;
       }
@@ -91,6 +100,11 @@
       height: 80vh; 
       overflow-y: scroll;
       padding-bottom: 1rem;
+    }
+
+    .card-footer {
+      background-color:white;
+      border-top:none;
     }
     .card-footer-list{
       display: flex;
@@ -121,13 +135,25 @@
           border-radius: 100px;
           outline: none;
           text-align: center;
+          background-color:rgb(241, 240, 240);
         }
         .tweet-btn{
           background-color:#1da1f2;
         }
+        
+        .table {
+          background-color:rgb(241, 240, 240);
+          border-radius: 10%;
+        }
+
         td > ul {
           list-style: none;
           padding: 0;
+        }
+
+        .sidebar-right{
+          height: 100vh;
+          overflow-y: scroll;
         }
     </style>
   </head>
@@ -264,7 +290,7 @@
               <div class="card">
                 <div class="card-header">
                   <img src="https://picsum.photos/30/30"  class="rounded-circle" alt="Random photo"/>
-                  <strong>Alex <i class="confirmed-tickmarks fa fa-check rounded-circle" aria-hidden="true"></i></strong>         
+                  <span><strong>Alex</strong> <i class="confirmed-tickmarks fa fa-check rounded-circle" aria-hidden="true"></i><small style="color:gray"> @Alex · 3h</small></span>         
                 </div>
                 <div class="card-body">
                   <p class="article-text">
@@ -290,7 +316,7 @@
               <div class="card">
                 <div class="card-header">
                   <img src="https://picsum.photos/30/30"  class="rounded-circle" alt="Random photo"/>
-                  <strong>Lucas <i class="confirmed-tickmarks fa fa-check rounded-circle" aria-hidden="true"></i></strong>         
+                  <span><strong>Lucas</strong> <i class="confirmed-tickmarks fa fa-check rounded-circle" aria-hidden="true"></i><small style="color:gray"> @Lucas · 4h</small></span> 
                 </div>
                 <div class="card-body">
                   <p class="article-text">
@@ -315,7 +341,10 @@
                 </div>
               </div>
               <div class="card">
-                <div class="card-header">Twitter feed</div>
+                <div class="card-header">
+                  <img src="https://picsum.photos/30/30"  class="rounded-circle" alt="Random photo"/>
+                  <span><strong>John</strong> <i class="confirmed-tickmarks fa fa-check rounded-circle" aria-hidden="true"></i><small style="color:gray"> @JohnDoe · 5h</small></span> 
+                </div>
                 <div class="card-body">
                   <p class="article-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -334,7 +363,10 @@
                 </div>
               </div>
               <div class="card">
-                <div class="card-header">Twitter feed</div>
+                <div class="card-header">
+                  <img src="https://picsum.photos/30/30"  class="rounded-circle" alt="Random photo"/>
+                  <span><strong>John</strong> <i class="confirmed-tickmarks fa fa-check rounded-circle" aria-hidden="true"></i><small style="color:gray"> @JohnDoe · 5h</small></span> 
+                </div>
                 <div class="card-body">
                   <p class="article-text">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -353,7 +385,10 @@
                 </div>
               </div>
               <div class="card">
-                <div class="card-header">Twitter feed</div>
+                <div class="card-header">
+                  <img src="https://picsum.photos/30/30"  class="rounded-circle" alt="Random photo"/>
+                  <span><strong>John</strong> <i class="confirmed-tickmarks fa fa-check rounded-circle" aria-hidden="true"></i><small style="color:gray"> @JohnDoe · 5h</small></span> 
+                </div>
                 <div class="card-body">
                   <p class="article-text">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -373,7 +408,10 @@
                 </div>
               </div>
               <div class="card">
-                <div class="card-header">Twitter feed</div>
+                <div class="card-header">
+                  <img src="https://picsum.photos/30/30"  class="rounded-circle" alt="Random photo"/>
+                  <span><strong>John</strong> <i class="confirmed-tickmarks fa fa-check rounded-circle" aria-hidden="true"></i><small style="color:gray"> @JohnDoe · 5h</small></span> 
+                </div>
                 <div class="card-body">
                   <p class="article-text">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -397,18 +435,21 @@
         </main>
         <!-- main -->
         <!--Sidebar right-->
-        <div class="col-3">
+        <div class="col-3 sidebar-right">
+          <div  class="sticky-top bg-light">
           <form >
             <div class="input-icons">
                 <i class="fa fa-search icon">
               </i>
                 <input class="input-field" 
                        type="text" 
-                       placeholder="Search...">
+                       placeholder="Search..."
+                       >
             </div>
           </form>
+        </div>
           <!--Trending-->
-          <table class="table table-hover">
+          <table class="table table-hover trend-table">
             <thead>
               <tr>
                 <th><h5 class="fw-bold">Trends for you</h5></th>
@@ -442,8 +483,64 @@
                   </ul>
                 </td>
               </tr>
+              <tr>
+                <td>
+                  <ul>
+                    <li><small style="font-size:12px;">Trending in Sweden</small><img src="./assets/svgexport-10.svg" alt="menu" style=" cursor: pointer; float:right;"></li>
+                    <li><strong>Will&Skill</strong></li>
+                    <li>Crafting awesome websites</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <ul>
+                    <li><small style="font-size:12px;">Trending in Sweden</small><img src="./assets/svgexport-10.svg" alt="menu" style=" cursor: pointer; float:right;"></li>
+                    <li><strong>Will&Skill</strong></li>
+                    <li>Crafting awesome websites</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <ul>
+                    <li><small style="font-size:12px;">Trending in Sweden</small><img src="./assets/svgexport-10.svg" alt="menu" style=" cursor: pointer; float:right;"></li>
+                    <li><strong>Will&Skill</strong></li>
+                    <li>Crafting awesome websites</li>
+                  </ul>
+                </td>
+              </tr>
             </tbody>
           </table>
+          <!-- barrier -->
+          <table class="table table-hover trend-table">
+            <thead>
+              <tr>
+                <th><h5 class="fw-bold">Who To Follow</h5></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li><small style="font-size:12px;">@ElonMusk</small><button class="btn btn-dark fw-bold" style="float: right; border-radius: 33%;">Follow</button></li>
+                    <li><strong>Elon</strong></li>
+                    <li>Spaceman <img src="./assets/🚀.svg" alt="Spaceship"></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <ul>
+                    <li><small style="font-size:12px;">@Knugen1337</small><button class="btn btn-dark fw-bold" style="float: right; border-radius: 33%;">Follow</button></li>
+                    <li><strong>Sveriges Konung</strong></li>
+                    <li>FestarN</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- safsdffs -->
         </div>
         </div>
       </div>
