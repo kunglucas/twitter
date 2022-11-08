@@ -1,0 +1,132 @@
+@media only screen and (max-width: 600px)  
+{
+  .col-3 {
+    display:none;
+    width:0px;
+  }
+
+}
+
+body {
+padding-top: 1rem;
+}
+.container .navbar-brand {
+color: #1da1f2;
+}
+
+
+
+.nav-link > .active {
+color: blue;
+}
+
+.nav-link {
+color: rgb(45, 44, 44);
+}
+
+.tweet input::placeholder {
+color: rgb(82, 80, 80);
+font-weight: bold;
+font-size: 16px;
+}
+
+.tweet {
+opacity:0, 2;
+}
+
+.tweet input {
+width: 100%;
+color:black;
+border:0;
+outline: none !important;
+}
+.tweet-input-focus {
+display:none;
+}
+.tweet-input:focus + .tweet-input-focus {
+display:block;
+}
+article {
+background-color: white;
+padding: 4px;
+padding-top: 0px;
+}
+
+article .card {
+margin-top: 24px;
+}
+
+.card-header {
+background-color:white;
+border-bottom:none;
+}
+
+.card:hover >*{
+background-color:rgb(249, 245, 245);
+}
+.tweet-feed{
+height: auto; 
+padding-bottom: 1rem;
+}
+
+.card-footer {
+background-color:white;
+border-top:none;
+}
+.card-footer-list{
+display: flex;
+justify-content: space-around;
+list-style: none;
+}
+.confirmed-tickmarks{
+background-color:#1da1f2; color:white; padding:2px;
+}
+.input-icons i {
+  position: absolute;
+}
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+.icon {
+  padding: 10px;
+  color: black;
+  min-width: 50px;
+  text-align: center;
+}
+.input-field {
+width: 100%;
+padding: 10px 35px 10px 15px;
+border: none;
+border-radius: 100px;
+outline: none;
+text-align: center;
+background-color:rgb(241, 240, 240);
+}
+.tweet-btn{
+background-color:#1da1f2;
+}
+
+.table {
+background-color:rgb(241, 240, 240);
+border-radius: 10%;
+}
+
+td > ul {
+list-style: none;
+padding: 0;
+}
+
+.sidebar-right{
+height: 100vh;
+overflow-y: scroll;
+}
+.card-footer-list > *:hover{
+cursor: pointer;
+}
+.tweet-1-dots:hover{
+cursor: pointer;
+border: solid 1px #1da1f2;
+border-radius: 33%;
+}
