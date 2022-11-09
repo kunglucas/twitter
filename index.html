@@ -132,7 +132,7 @@
               <div class="d-flex flex-column flex-grow-1">
               <div class="inner-tweet-top d-flex justify-content-between">
               <h3>Home</h3>
-              <img src="./assets/svgexport-11.svg" alt="twitter-star-Icon" class="img-fluid bg-light">
+              <img src="./assets/svgexport-11.svg" style="height:20px; width:20px;" alt="twitter-star-Icon" class="img-fluid bg-light">
             </div>
               <div class="inner-tweet-mid">
                 <input class="tweet-input bg-light" type="text" placeholder="What's Happening...">
@@ -143,10 +143,12 @@
               <div class="inner-tweet-bot d-flex justify-content-between">
                 <div class="tweet-logos">
                   <!-- Logotyper -->
-                  <img src="./assets/svgexport-13.svg" alt="">
-                  <img src="./assets/svgexport-14.svg" alt="">
-                  <img src="./assets/svgexport-15.svg" alt="">
-                  <img src="./assets/svgexport-16.svg" alt="">
+                  <img src="./assets/svgexport-13.svg" alt="Media">
+                  <img src="./assets/svgexport-14.svg" alt="Gif">
+                  <img src="./assets/svgexport-15.svg" alt="Poll">
+                  <img src="./assets/svgexport-16.svg" alt="Emoji">
+                  <img src="./assets/svgexport-17.svg" alt="Schedule">
+                  <img src="./assets/svgexport-18.svg" alt="Location">
               </div>
               <button class="btn btn-primary btn-rounded tweet-btn">Tweet</button>
               </div>
@@ -191,7 +193,7 @@
                   <span><strong>Lucas</strong> <i class="confirmed-tickmarks fa fa-check rounded-circle" aria-hidden="true"></i><small style="color:gray"> @Lucas · 4h</small></span>
                   <div style="float: right;" >
                     <img src="assets/twitter_dots.svg" alt="dots" class="tweet-1-dots" style="padding-top: 5px;">
-                    <button type="button" class="btn-close" data-bs-dismiss="card"></button>
+                    <button type="button" class="btn-close" data-dismiss="alert" data-target="#card"></button>
                 </div>
                 </div>
                 <div class="card-body">
@@ -435,5 +437,11 @@
         </div>
         </div>
       </div>
+      <script>
+        //Close cards on clicking btn.
+        $('.close-icon').on('click',function() {
+          $(this).closest('.card').fadeOut();
+        })
+      </script>
   </body>
 </html>
